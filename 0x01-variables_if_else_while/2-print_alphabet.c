@@ -10,8 +10,6 @@ int main(void)
 
 	for (lettr = 'a'; lettr <= 'z'; lettr++)
 		putchar(lettr);
-	for (lettr = 'A'; lettr <= 'Z'; lettr++)
-		putchar(lettr);
 	putchar('\n');
 	return (0);
 
