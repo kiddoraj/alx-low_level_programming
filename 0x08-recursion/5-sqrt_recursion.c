@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_sqrt_recursion - returns the natural sqrt of a number
- *n: number
+ *n:number
  *
  *Return: -1 if n does not have a natural sqrt
  */
