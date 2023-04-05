@@ -8,8 +8,8 @@
 int is_prime_number(int n)
 {
 	if (n <= 1)
-		return (-1);
-	return (rl_prime(n, n-1));
+		return (0);
+	return (rl_prime(n, n - 1));
 }
 /**
  *rl_prime - calculate if a number is a prime recursively
