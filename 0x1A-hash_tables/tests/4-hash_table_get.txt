@@ -1,0 +1,43 @@
+Certainly! Here's an example test case for the `hash_table_get` function:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include "hash_tables.h"
+
+int main(void)
+{
+    hash_table_t *hash_table;
+    unsigned long int size = 10;
+    char *value;
+
+    hash_table = hash_table_create(size);
+    if (hash_table == NULL)
+    {
+        printf("Failed to create hash table.\n");
+        return 1;
+    }
+
+    /* Add elements to the hash table */
+    hash_table_set(hash_table, "key1", "value1");
+    hash_table_set(hash_table, "key2", "value2");
+    hash_table_set(hash_table, "key3", "value3");
+
+    /* Retrieve values from the hash table */
+    value = hash_table_get(hash_table, "key1");
+    printf("Value for key1: %s\n", value != NULL ? value : "Not found");
+
+    value = hash_table_get(hash_table, "key2");
+    printf("Value for key2: %s\n", value != NULL ? value : "Not found");
+
+    value = hash_table_get(hash_table, "key3");
+    printf("Value for key3: %s\n", value != NULL ? value : "Not found");
+
+    value = hash_table_get(hash_table, "key4");
+    printf("Value for key4: %s\n", value != NULL ? value : "Not found");
+
+    return 0;
+}
+```
+
+In this test case, we create a hash table with a size of 10 using the `hash_table_create` function. We then add elements to the hash table using the `hash_table_set` function. Next, we retrieve values from the hash table using the `hash_table_get` function, providing the respective keys. The retrieved values are then printed to the console. You can modify the keys and check for different values in the hash table.
