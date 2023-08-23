@@ -1,0 +1,29 @@
+# Makefile for 'school' executable
+
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Wextra
+
+# Source files
+SRCS = main.c school.c
+OBJS = $(SRCS:.c=.o)
+
+# Header file
+HDRS = m.h
+
+# Target executable
+TARGET = school
+
+# Default rule to build the executable
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+# Clean rule to remove generated files
+clean:
+	rm -f $(TARGET) $(OBJS)
+
+# PHONY rule to avoid conflicts with file names
+.PHONY: all clean
+
